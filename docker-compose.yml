@@ -1,0 +1,21 @@
+version: '2'
+services:
+  proxy:
+    build: ./
+    networks:
+      - bnbhackaton
+      - monitor
+      - customer_db
+    ports:
+      - 80:80
+
+networks:
+  bnbhackaton:
+    external:
+      name: bnbhackaton_default
+  monitor:
+    external:
+      name: monitor_default
+  customer_db:
+    external:
+      name: customerdb_default
