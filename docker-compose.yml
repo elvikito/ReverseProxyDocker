@@ -3,19 +3,19 @@ services:
   proxy:
     build: ./
     networks:
-      - bnbhackaton
+        #- bnbhackaton
       - monitor
-      - customer_db
+        #- customer_db
     ports:
       - 80:80
 
 networks:
-  bnbhackaton:
-    external:
-      name: bnbhackaton_default
+  #bnbhackaton:
+   #external:
+   #  name: bnbhackaton_default
   monitor:
     external:
-      name: monitor_default
-  customer_db:
-    external:
-      name: customerdb_default
+      name: monitorserver_default
+  #customer_db:
+      #  external:
+      #name: customerdb_default
